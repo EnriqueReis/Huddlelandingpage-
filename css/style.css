@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    background-image: url(/index/img/bg-desktop.svg);
+    background-color: #674bb1;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
+    grid-template-areas:
+        "header"
+        "section"
+        "footer"
+    ;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+}
+
+section{
+    grid-area: section;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 60% 40%;
+    padding: 0 7%;
+}
+
+img{
+    width: 100%;
+}
+
+.div_esq{
+    height: 550px;
+}
+
+.div_dir{
+    display: flex;
+    height: 550px;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.div_dir h1{
+    color: white;
+    font-size: 45px;
+    padding: 35px 0px ;
+
+}
+
+p{
+    color: white;
+    padding-bottom: 35px;
+}
+
+#btn_register{
+    width: 150px;
+    height: 38px;
+    border-radius: 19px;
+    border: 0;
+    color: #674bb1;
+    background-color: white;
+}
+
+#btn_register:hover{
+    background-color: #cf6bca;
+    cursor: pointer;
+}
+
+footer{
+    grid-area: footer;
+    padding: 0 7%;
+}
+ul{
+    display: flex;
+    align-items: center;   
+    justify-content: flex-end;   
+}
+
+ul li{
+    list-style: none;  
+    padding: 0 10px;
+          
+}
+
+ul li a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 50%; 
+    border: solid 1px white;
+    height: 50px;
+    width: 50px;
+     
+}
+
+ul li a:hover{
+    border: solid 1px #cf6bca;
+}
+
+
+ul li a i {
+    color: white;
+    display: flex;
+    font-size: 21px;    
+}
+
+ul li a i:hover{
+    color: #cf6bca;
+}
+
+@media (max-width: 747px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px){
+
+    .container{
+        grid-template-rows: 15% 80% 5%;
+    }
+    section{
+        height: auto;
+    }
+    .div_dir{
+        height: auto;
+        text-align: center;
+        
+    }
+
+    .div_dir h1{
+        font-size: 25px;
+        padding: 15px 0;
+    }
+
+    .div_dir p{
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+
+    .div_esq{
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    #btn_register{
+        margin: auto;
+    }
+
+    ul{
+        display: flex;
+        align-items: center;   
+        justify-content: center;   
+    }
+
+    ul li a{
+        height: 30px;
+        width: 30px;
+    }
+
+    ul li a i {
+        font-size: 15px;    
+    }
+
+}
